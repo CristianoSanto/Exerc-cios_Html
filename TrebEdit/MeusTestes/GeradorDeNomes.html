@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Gerador de Nomes Aleatórios</title>
+  </head>
+  <body>
+    <h1>Gerador de Nomes Aleatórios</h1>
+    <button onclick="gerarNome()">Gerar Nome</button>
+    <br>
+    <p id="nomeGerado"></p>
+    <script>
+      const nomes = ["Miguel", "Sophia", "Davi", "Alice", "Arthur", "Julia", "Pedro", "Isabella", "Gabriel", "Manuela", "Bernardo", "Laura", "Lucas", "Valentina", "Enzo", "Giovanna", "Matheus", "Beatriz", "Rafael", "Maria, Luiza", "Heitor", "Lara", "Felipe", "Maria Eduarda", "João", "Livia", "Henrique", "Mariana", "Guilherme", "Helena"];
+      
+      const sobrenomes = ["Silva", "Santos", "Costa", "Pereira", "Carvalho", "Ferreira", "Oliveira", "Almeida", "Souza", "Lima", "Rodrigues", "Freitas", "Castro", "Mendes", "Gomes", "Vieira", "Nogueira", "Marques", "Ribeiro", "Campos", "Fernandes", "Cardoso", "Fonseca", "Monteiro", "Batista", "Gonçalves", "Barbosa", "Moura", "Teixeira", "Lopes"];
+      
+      function gerarNome() {
+        // Escolhe um nome e um sobrenome aleatório da lista
+        const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+        const sobrenomeAleatorio = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+        
+        // Exibe o nome gerado na página
+        document.getElementById("nomeGerado").textContent = `Nome gerado: ${nomeAleatorio} ${sobrenomeAleatorio}.`;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filtros CSS</title>
+    <style>
+      img {
+        width: 300px;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .imagem {
+        margin: 20px;
+      }
+
+      .imagem:hover {
+        filter: grayscale(100%);
+      }
+
+      .imagem:nth-child(2n) {
+        filter: blur(5px);
+      }
+
+      .imagem:nth-child(3n) {
+        filter: brightness(150%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Galeria de imagens com filtros CSS</h1>
+
+    <div class="container">
+      <div class="imagem">
+        <img src="imagem1.jpg" alt="Imagem 1">
+      </div>
+      <div class="imagem">
+        <img src="imagem2.jpg" alt="Imagem 2">
+      </div>
+      <div class="imagem">
+        <img src="imagem3.jpg" alt="Imagem 3">
+      </div>
+      <div class="imagem">
+        <img src="imagem4.jpg" alt="Imagem 4">
+      </div>
+      <div class="imagem">
+        <img src="imagem5.jpg" alt="Imagem 5">
+      </div>
+    </div>
+  </body>
+</html>

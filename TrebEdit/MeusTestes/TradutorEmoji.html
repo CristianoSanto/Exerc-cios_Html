@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Tradutor de Emoji</title>
+  </head>
+  <body>
+    <h1>Tradutor de Emoji</h1>
+    <label for="palavra">Digite uma palavra:</label>
+    <input type="text" id="palavra">
+    <button onclick="traduzir()">Traduzir</button>
+    <p id="emoji"></p>
+    <script>
+      // Mapeia palavras para emojis
+      const traducoes = {
+        "gato": "🐱",
+        "cachorro": "🐶",
+        "sorriso": "😊",
+        "triste": "😢",
+        "amor": "❤️"
+      };
+      
+      function traduzir() {
+        // Pega a palavra digitada pelo usuário
+        const palavra = document.getElementById("palavra").value;
+        
+        // Verifica se há uma tradução para a palavra
+        if (traducoes[palavra]) {
+          // Se houver, exibe o emoji correspondente
+          document.getElementById("emoji").textContent = traducoes[palavra];
+        } else {
+          // Caso contrário, exibe uma mensagem de erro
+          document.getElementById("emoji").textContent = "Não há tradução para essa palavra.";
+        }
+      }
+    </script>
+  </body>
+</html>

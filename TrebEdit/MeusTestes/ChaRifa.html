@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cartão Chá Rifa</title>
+    <style>
+      /* Estilos para o cartão */
+      body {
+        background-color: #f3e5f5;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #673ab7;
+        font-size: 2.5em;
+        margin-top: 50px;
+      }
+      p {
+        color: #333;
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #673ab7;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chá Rifa</h1>
+    <p>Escolha um número de 1 a 100:</p>
+    <form>
+      <input type="number" id="numero-escolhido" min="1" max="100">
+      <br>
+      <button type="button" onclick="comprarNumero()">Comprar Número</button>
+    </form>
+    <script>
+      // Array para armazenar os números comprados
+      var numerosComprados = [];
+
+      // Função para comprar um número
+      function comprarNumero() {
+        var numero = document.getElementById("numero-escolhido").value;
+
+        // Verifica se o número já foi comprado
+        if (numerosComprados.includes(numero)) {
+          alert("Este número já foi comprado. Por favor, escolha outro.");
+          return;
+        }
+
+        // Adiciona o número ao array de números comprados
+        numerosComprados.push(numero);
+
+        // Exibe uma mensagem de confirmação e atualiza a lista de números comprados
+        alert("Você comprou o número " + numero + ".");
+        atualizarListaNumerosComprados();
+      }
+
+      // Função para atualizar a lista de números comprados
+      function atualizarListaNumerosComprados() {
+        var lista = document.getElementById("lista-numeros-comprados");
+        lista.innerHTML = "";
+
+        for (var i = 0; i < numerosComprados.length; i++) {
+          var item = document.createElement("li");
+          item.innerHTML = numerosComprados[i];
+          lista.appendChild(item);
+        }
+      }
+    </script>
+    <h2>Números Comprados:</h2>
+    <ul id="lista-numeros-comprados"></ul>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rifa Digital</title>
+    <style>
+      /* Estilos para a rifa */
+      body {
+        background-color: #f3e5f5;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: #673ab7;
+        font-size: 2.5em;
+        margin-top: 50px;
+      }
+      p {
+        color: #333;
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #673ab7;
+        border: none;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Rifa Digital</h1>
+    <p>O número sorteado foi:</p>
+    <p id="numero-sorteado"></p>
+    <button onclick="sortear()">Sortear</button>
+    <script>
+      // Função para sortear um número aleatório de 1 a 100
+      function sortear() {
+        var numero = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("numero-sorteado").innerHTML = numero;
+      }
+    </script>
+  </body>
+</html>

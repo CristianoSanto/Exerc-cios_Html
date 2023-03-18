@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplo de utilização de variáveis CSS</title>
+    <style>
+      :root {
+        --cor-principal: #007bff;
+        --tamanho-fonte: 16px;
+      }
+
+      body {
+        font-size: var(--tamanho-fonte);
+        color: var(--cor-principal);
+        background-color: var(--cor-secundaria);
+      }
+
+      h1 {
+        font-size: calc(var(--tamanho-fonte) * 1.5);
+        color: var(--cor-principal);
+        margin-top: 2rem;
+      }
+
+      p {
+        margin-top: 1rem;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exemplo de utilização de variáveis CSS</h1>
+    <p>Este é um exemplo de como utilizar variáveis CSS para definir valores que podem ser reutilizados em diferentes partes do seu estilo. Neste exemplo, estamos utilizando variáveis para definir a cor principal e o tamanho da fonte do texto.</p>
+    <p>Também estamos utilizando a variável de cor secundária para definir a cor de fundo do body. Tudo isso pode ser facilmente ajustado modificando as variáveis no :root.</p>
+  </body>
+</html>

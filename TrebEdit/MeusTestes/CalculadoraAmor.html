@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Amor</title>
+  </head>
+  <body>
+    <h1>Calculadora de Amor</h1>
+    
+    
+    
+    
+    <label1 for="nome1">Digite o nome da primeira pessoa:</label>
+    <input type="text" id="nome1">
+    <br>
+    <label2 for="nome2">Digite o nome da segunda pessoa:</label>                
+    <input type="text" id="nome2">    
+    <br>
+    
+    
+    
+    
+    <button onclick="calcular()">Calcular</button>
+    <br>
+    <p id="resultado"></p>
+  
+  
+    <script>                
+      function calcular() {
+        // Pega os nomes digitados pelo usuário
+        const nome1 = document.getElementById("nome1").value;
+        const nome2 = document.getElementById("nome2").value;
+        
+        // Calcula a compatibilidade
+        const porcentagem = Math.floor(Math.random() * 101);
+        
+        // Exibe o resultado na página
+        document.getElementById("resultado").textContent = `A compatibilidade entre ${nome1} e ${nome2} é de ${porcentagem}%.`;
+      }
+    </script>
+    
+    <style>
+   h1 {
+      display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: salmon;   
+  }
+  
+  label1 {
+        color: blue;
+      }
+  
+   label2 { 
+   color: red;
+   
+   
+    }  
+      
+    button {
+        background-color: green;
+        color: white;
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }  
+      
+            
+    img {
+        width: 200px; 
+        height: auto;
+        
+        
+    }
+    
+            
+    </style>
+
+
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5NnMHQq7zvB7Z4u7hyiEpCAM7p3eB6aJvHnIra7TaycCkKD7JFJV5_og&s=10" alt="Imagem">    
+    
+  </body>
+</html>

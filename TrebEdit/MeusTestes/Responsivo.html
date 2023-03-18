@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplo de Site Responsivo</title>
+    <style>
+      /* Estilo para todas as telas */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Estilo para telas menores que 768px */
+      @media (max-width: 767px) {
+        body {
+          font-size: 14px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      /* Estilo para telas maiores que 768px */
+      @media (min-width: 768px) {
+        body {
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 36px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Meu Site Responsivo</h1>
+    </header>
+    <main>
+      <p>Bem-vindo ao meu site responsivo. Este texto será exibido em todas as telas.</p>
+    </main>
+  </body>
+</html>
