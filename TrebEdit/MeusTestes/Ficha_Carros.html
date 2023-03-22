@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pesquisa de Carros</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Pesquisa de Carros</h1>
+    <form id="search-form">
+      <label for="marca">Marca:</label>
+      <select id="marca" name="marca">
+        <option value="volkswagen">Volkswagen</option>
+        <option value="chevrolet">Chevrolet</option>
+        <option value="fiat">Fiat</option>
+      </select>
+
+      <label for="modelo">Modelo:</label>
+      <select id="modelo" name="modelo">
+        <!-- options serão preenchidos dinamicamente usando JavaScript -->
+      </select>
+
+      <button type="submit">Pesquisar</button>
+    </form>
+
+    <div id="results"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
